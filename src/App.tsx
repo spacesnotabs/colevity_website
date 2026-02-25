@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import coloredLogo from "./assets/colored-logo.png";
 
 const year = new Date().getFullYear();
 
@@ -154,8 +155,12 @@ export default function App() {
     <div className="min-h-screen bg-white text-ink">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="text-xl font-semibold tracking-tight text-ink">
-            Colevity
+          <div className="flex items-center">
+            <img
+              src={coloredLogo}
+              alt="Colevity"
+              className="h-8 w-auto"
+            />
           </div>
           <div className="hidden items-center gap-6 text-sm font-medium text-slate md:flex">
             {navLinks.map((link) => (
@@ -180,11 +185,11 @@ export default function App() {
               Practical AI for real teams
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-ink md:text-5xl">
-              Practical AI training and tools—built by a software engineer.
+              Practical AI training and tools, built by a software engineer.
             </h1>
             <p className="text-lg text-slate">
               Colevity helps schools and small businesses adopt AI safely, save time,
-              and build useful internal tools—without the hype.
+              and build useful internal tools without the hype.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -234,24 +239,25 @@ export default function App() {
         </section>
 
         <section className="border-y border-slate-200 bg-white">
-          <div className="mx-auto grid max-w-6xl gap-6 px-6 py-12 md:grid-cols-3">
-            {credibility.map((item) => (
-              <div key={item} className="rounded-2xl border border-slate-200 p-5 text-sm text-slate">
-                {item}
-              </div>
-            ))}
-          </div>
-          <div className="mx-auto grid max-w-6xl gap-6 px-6 pb-12 md:grid-cols-2">
-            {[1, 2].map((index) => (
-              <div key={index} className="rounded-3xl border border-slate-200 bg-soft p-6">
-                <p className="text-sm text-slate">
-                  “Placeholder testimonial about clear, practical AI guidance.”
-                </p>
-                <p className="mt-4 text-sm font-semibold text-ink">
-                  Name Placeholder · Title/Organization
-                </p>
-              </div>
-            ))}
+          <div className="mx-auto max-w-6xl px-6 py-12">
+            <div className="flex flex-col gap-3">
+              <h2 className="text-2xl font-semibold text-ink">Testimonials</h2>
+              <p className="text-sm text-slate">
+                Short, practical feedback from teams and educators.
+              </p>
+            </div>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              {[1, 2].map((index) => (
+                <div key={index} className="rounded-3xl border border-slate-200 bg-soft p-6">
+                  <p className="text-sm text-slate">
+                    “Placeholder testimonial about clear, practical AI guidance.”
+                  </p>
+                  <p className="mt-4 text-sm font-semibold text-ink">
+                    Name Placeholder · Title/Organization
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -319,7 +325,7 @@ export default function App() {
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl font-semibold text-ink">Work & Examples</h2>
             <p className="text-slate">
-              Representative project outcomes (placeholders — no client names).
+              Representative project outcomes (placeholders, no client names).
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -351,7 +357,7 @@ export default function App() {
                 helps people.
               </p>
               <p className="text-slate">
-                Colevity exists to make AI feel approachable and trustworthy—especially
+                Colevity exists to make AI feel approachable and trustworthy, especially
                 for educators, small teams, and leaders who need clarity more than hype.
               </p>
             </div>
@@ -460,7 +466,7 @@ export default function App() {
         <section id="privacy" className="border-t border-slate-200 bg-white">
           <div className="mx-auto max-w-6xl px-6 py-8 text-xs text-slate">
             Privacy note: Form submissions open your email client and are not stored by
-            Colevity. No spam—just the information you choose to send.
+            Colevity. No spam, just the information you choose to send.
           </div>
         </section>
       </main>
